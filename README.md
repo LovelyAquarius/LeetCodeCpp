@@ -13,8 +13,9 @@
 - 使用shell工具导航到这个文件夹
 - 输入命令``git clone https://github.com/LovelyAquarius/LeetCodeCpp``
 - 下载完成后进入"LeetCodeCpp/scripts"文件夹
-- 运行Setup.bat脚本，将生成sln文件
+- 运行Setup.bat脚本，将生成sln文件。如果没有premake会提示安装，键入y即可。有时候可能因为网络问题下载子模块失败，这种情形下重新运行这个脚本，实在不能下载考虑手动安装这些子模块。
 - 使用VS2022打开sln文件
+- 如果安装过程中遇到什么困难，例如无法下载的情形，可以email我的邮箱，如果有时间的话会回复。
 
 #### 其他
 未做
