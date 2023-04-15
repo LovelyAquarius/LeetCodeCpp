@@ -1,8 +1,10 @@
 #include "PCH.h"
+#include "system/application.h"
 #include "system/Solution.h"
 #include "system/utils.h"
 #include "solutions/leetcode1/leetcode1.h"
 #include "system/Time.h"
+#include "system/Result.h"
 using json = nlohmann::json;
 
 
@@ -17,16 +19,18 @@ using json = nlohmann::json;
 
 int main() 
 {
-	//vector<int> nums{ 2, 7, 11, 15 };
-	//int target=9;
-	json sampledata = GetSampleData("leetcode1", "001");
+	//App* app = App::getApp();
+	json sampledata = GetSampleData("leetcode1", "002");
 	leetcode1 issue_1 = leetcode1(sampledata["nums"], sampledata["target"]);
 	{
-		TIME_PROFILE("≤‚ ‘");
-		cout << issue_1.solve1() << endl;
+		TIME_PROFILE(GenerateTitle("leetcode1", "002" ,"±©¡¶∑®"));
+		cout << endl<< issue_1.solve1();
+	}
+	{
+		TIME_PROFILE(GenerateTitle("leetcode1", "002", "π˛œ£∑®"));
+		cout << endl << issue_1.solve2() ;
 	}
 	
-	//cout << GetSampleData("leetcode1","001")["target"] << endl;
 	getchar();
 	return 0;
 }

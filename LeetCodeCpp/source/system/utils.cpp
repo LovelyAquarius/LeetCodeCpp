@@ -6,10 +6,15 @@
 //不要擅自改动项目的布局，无法运行我可不管
 const std::string solutionPath = "G:\\Mine\\LeetCode\\Cpp\\LeetCodeCpp\\source\\solutions";
 
-nlohmann::json  GetSampleData(std::string solutionid, std::string sampleid)
+nlohmann::json  GetSampleData(const std::string solutionid, const std::string sampleid)
 {
 	std::string path = solutionPath + "\\" + solutionid + "\\" + "sample.json";
 	std::ifstream f(path);
 	nlohmann::json data = nlohmann::json::parse(f);
 	return data[sampleid];
+}
+std::string  GenerateTitle(const std::string solutionid, const std::string sampleid, const std::string methodName)
+{
+	std::string s = "题目：";
+	return s + solutionid + "\n" + "输入样本： " + sampleid + "\n" + "使用方法： " + methodName + "\n";
 }
