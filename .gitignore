@@ -1,0 +1,14 @@
+# Binaries
+bin/
+bin-inter/
+
+# Visual Studio files and folder
+.vs/
+**.sln
+**.vcxproj
+**.vcxproj.filters
+**.vcxproj.user
+
+# Directories
+LeetCodeCpp/vendor/nlohmannjson
+scripts/__pycache__

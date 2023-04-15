@@ -1,0 +1,4 @@
+[submodule "LeetCodeCpp/vendor/nlohmannjson"]
+	path = LeetCodeCpp/vendor/nlohmannjson
+	url = github.com/nlohmann/json.git
+	branch = develop
