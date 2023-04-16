@@ -1,19 +1,20 @@
 #pragma once
 #include "PCH.h"
-#include "system/solution.h"
-#include "system/utils.h"
-#include "system/Result.h"
+#include "system/sys.h"
 //给定一个整数数组 nums 和一个整数目标值 target，请你在该数组中找出 和为目标值 target  的那 两个 整数，并返回它们的数组下标。
 //你可以假设每种输入只会对应一个答案。但是，数组中同一个元素在答案里不能重复出现。
 using namespace std;
 class leetcode1 :public Solution
 {
-public:
+public://构造器
     leetcode1() = delete;
     leetcode1(vector<int> nums, int target) //nums是输入样本数组，target是和的值
         :Solution(), nums(nums), target(target) {}
+    virtual ~leetcode1() override {};
+public://算法部分
+    //测试结果解法2优于解法1
     //解法1
-    Result solve1() {
+   virtual Result solve1() override {
         int i=0, j=0;
         array<int, 2> result;
         for (; i < nums.size() - 1; i++)
@@ -31,7 +32,7 @@ public:
         return R2S(result);
     }
     //解法二
-    Result solve2() {
+   virtual Result solve2() override {
         //std::unordered_map基于哈希实现
         unordered_map<int, int> map;
         array<int, 2> result{0,0}; // 存储结果的数组
@@ -47,6 +48,7 @@ public:
         }
         return R2S(result); // 没有找到
     }
+   
 private:
     string R2S(array<int, 2>& r)
     {

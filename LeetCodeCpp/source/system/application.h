@@ -8,6 +8,7 @@ public:
             return s_Instance;
        else {
            s_Instance = new App();
+           return s_Instance;
        }
     }
 

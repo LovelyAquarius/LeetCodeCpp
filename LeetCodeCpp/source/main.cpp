@@ -1,10 +1,11 @@
 #include "PCH.h"
 #include "system/application.h"
-#include "system/Solution.h"
-#include "system/utils.h"
+#include "system/sys.h"
+//题目
 #include "solutions/leetcode1/leetcode1.h"
-#include "system/Time.h"
-#include "system/Result.h"
+#include "solutions/leetcode2/leetcode2.h"
+
+
 using json = nlohmann::json;
 
 
@@ -19,8 +20,8 @@ using json = nlohmann::json;
 
 int main() 
 {
-	//App* app = App::getApp();
-	json sampledata = GetSampleData("leetcode1", "002");
+	App* app = App::getApp();
+	/*json sampledata = GetSampleData("leetcode1", "002");
 	leetcode1 issue_1 = leetcode1(sampledata["nums"], sampledata["target"]);
 	{
 		TIME_PROFILE(GenerateTitle("leetcode1", "002" ,"暴力法"));
@@ -29,8 +30,13 @@ int main()
 	{
 		TIME_PROFILE(GenerateTitle("leetcode1", "002", "哈希法"));
 		cout << endl << issue_1.solve2() ;
+	}*/
+	json sampledata = GetSampleData("leetcode2", "001");
+	leetcode2 issue_2 = leetcode2(sampledata["l1"], sampledata["l2"]);
+	{
+		TIME_PROFILE(GenerateTitle("leetcode2", "001", "链表从低到高法"));
+		cout << endl << issue_2.solve1();
 	}
-	
 	getchar();
 	return 0;
 }
