@@ -31,11 +31,17 @@ int main()
 		TIME_PROFILE(GenerateTitle("leetcode1", "002", "哈希法"));
 		cout << endl << issue_1.solve2() ;
 	}*/
-	json sampledata = GetSampleData("leetcode2", "001");
+	json sampledata = GetSampleData("leetcode2", "002");
+
 	leetcode2 issue_2 = leetcode2(sampledata["l1"], sampledata["l2"]);
 	{
-		TIME_PROFILE(GenerateTitle("leetcode2", "001", "链表从低到高法"));
+		TIME_PROFILE(GenerateTitle("leetcode2", "002", "链表从低到高法"));
 		cout << endl << issue_2.solve1();
+	}
+	leetcode2 issue_3 = leetcode2(sampledata["l1"], sampledata["l2"]);
+	{
+		TIME_PROFILE(GenerateTitle("leetcode2", "002", "压栈法"));
+		cout << endl << issue_3.solve2();
 	}
 	getchar();
 	return 0;
