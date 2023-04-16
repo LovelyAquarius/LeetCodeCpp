@@ -4,7 +4,7 @@
 //题目
 #include "solutions/leetcode1/leetcode1.h"
 #include "solutions/leetcode2/leetcode2.h"
-
+#include "solutions/leetcode3/leetcode3.h"
 
 using json = nlohmann::json;
 
@@ -31,17 +31,22 @@ int main()
 		TIME_PROFILE(GenerateTitle("leetcode1", "002", "哈希法"));
 		cout << endl << issue_1.solve2() ;
 	}*/
-	json sampledata = GetSampleData("leetcode2", "002");
+	json sampledata = GetSampleData("leetcode3", "003");
 
-	leetcode2 issue_2 = leetcode2(sampledata["l1"], sampledata["l2"]);
+	leetcode3 test_1 = leetcode3(sampledata["s"]);
 	{
-		TIME_PROFILE(GenerateTitle("leetcode2", "002", "链表从低到高法"));
-		cout << endl << issue_2.solve1();
+		TIME_PROFILE(GenerateTitle("leetcode3", "002", "1"));
+		cout << test_1.solve1();
 	}
-	leetcode2 issue_3 = leetcode2(sampledata["l1"], sampledata["l2"]);
+	leetcode3 test_2 = leetcode3(sampledata["s"]);
 	{
-		TIME_PROFILE(GenerateTitle("leetcode2", "002", "压栈法"));
-		cout << endl << issue_3.solve2();
+		TIME_PROFILE(GenerateTitle("leetcode3", "002", "2"));
+		cout << test_2.solve2();
+	}
+	leetcode3 test_3 = leetcode3(sampledata["s"]);
+	{
+		TIME_PROFILE(GenerateTitle("leetcode3", "002", "3"));
+		cout << test_2.solve3();
 	}
 	getchar();
 	return 0;
