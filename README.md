@@ -6,16 +6,22 @@
 
 ### 如何配置安装本项目
 
-#### Windows+VS2022+python3
+#### Windows-x64+VS2022+python3
 - 请先确保你已经安装了VS2022和python3.3以上版本且正确配置环境变量
 - 确保你已经安装了git，且正确配置环境变量
 - 创建一个项目文件夹，路径自取，最好只有英文字符
 - 使用shell工具导航到这个文件夹
-- 输入命令``git clone https://github.com/LovelyAquarius/LeetCodeCpp``
+- 输入命令``git clone https://github.com/LovelyAquarius/LeetCodeCpp``下载纯净版
+- 输入命令``git clone -b ui https://github.com/LovelyAquarius/LeetCodeCpp``下载带ui版，这个分支目前可能不稳定，我也只是测试使用，而且会有很多多余的三方依赖
+  
 - 下载完成后进入"LeetCodeCpp/scripts"文件夹
 - 运行Setup.bat脚本，将生成sln文件。如果没有premake会提示安装，键入y即可。有时候可能因为网络问题下载子模块失败，这种情形下重新运行这个脚本，实在不能下载考虑手动安装这些子模块。
 - 使用VS2022打开sln文件
 - 如果安装过程中遇到什么困难，可以给我留言。
+  
+#### 关于UI版本
+开发中...
+
 
 #### 其他
 未做
