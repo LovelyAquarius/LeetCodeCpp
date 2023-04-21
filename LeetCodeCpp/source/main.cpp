@@ -1,10 +1,8 @@
 #include "PCH.h"
 #include "system/application.h"
 #include "system/sys.h"
-//题目
-#include "solutions/leetcode1/leetcode1.h"
-#include "solutions/leetcode2/leetcode2.h"
-#include "solutions/leetcode3/leetcode3.h"
+#include "exercise.h"
+
 
 using json = nlohmann::json;
 
@@ -31,23 +29,23 @@ int main()
 		TIME_PROFILE(GenerateTitle("leetcode1", "002", "哈希法"));
 		cout << endl << issue_1.solve2() ;
 	}*/
-	json sampledata = GetSampleData("leetcode3", "003");
-
-	leetcode3 test_1 = leetcode3(sampledata["s"]);
+	json sampledata = GetSampleData("leetcode4", "004");
+	
+	leetcode4 test_1 = leetcode4(sampledata["nums1"], sampledata["nums2"]);
 	{
-		TIME_PROFILE(GenerateTitle("leetcode3", "002", "1"));
-		cout << test_1.solve1();
+		TIME_PROFILE(GenerateTitle("leetcode4", "001", "1"));
+		cout << test_1.solve3();
 	}
-	leetcode3 test_2 = leetcode3(sampledata["s"]);
+	leetcode4 test_2 = leetcode4(sampledata["nums1"], sampledata["nums2"]);
 	{
-		TIME_PROFILE(GenerateTitle("leetcode3", "002", "2"));
-		cout << test_2.solve2();
+		TIME_PROFILE(GenerateTitle("leetcode4", "001", "暴力合并"));
+		cout << test_2.solve1();
 	}
-	leetcode3 test_3 = leetcode3(sampledata["s"]);
-	{
-		TIME_PROFILE(GenerateTitle("leetcode3", "002", "3"));
-		cout << test_2.solve3();
-	}
+	//leetcode3 test_3 = leetcode3(sampledata["s"]);
+	//{
+	//	TIME_PROFILE(GenerateTitle("leetcode3", "002", "3"));
+	//	cout << test_2.solve3();
+	//}
 	getchar();
 	return 0;
 }
