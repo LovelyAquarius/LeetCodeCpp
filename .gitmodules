@@ -2,6 +2,10 @@
 	path = LeetCodeCpp/vendor/nlohmannjson
 	url = https://github.com/nlohmann/json
 	branch = develop
-
-
-
+	
+[submodule "vendor/Rmlui"]
+	path = vendor/Rmlui
+	url = https://github.com/mikke89/RmlUi.git
+[submodule "vendor/freetype-windows-binaries"]
+	path = vendor/freetype-windows-binaries
+	url = https://github.com/ubawurinna/freetype-windows-binaries
