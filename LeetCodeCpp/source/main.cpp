@@ -20,23 +20,21 @@ int main()
 {
 	App* app = App::getApp();
 	
-	json sampledata = GetSampleData("other", "UVa540_TeamQueue", "001");
+	json sampledata = GetSampleData("other", "UVa136_UglyNumbers", "002");
 	
-	UVa540_TeamQueue test_1 = UVa540_TeamQueue(sampledata["members"], sampledata["operations"]);
+	
 	{
-		TIME_PROFILE(GenerateTitle("UVa540_TeamQueue", "001", "1"));
+		UVa136_UglyNumbers test_2 = UVa136_UglyNumbers(sampledata["n"]);
+		TIME_PROFILE(GenerateTitle("UVa136_UglyNumbers", "001", "2"));
+		cout << test_2.solve2();
+	}
+	{
+		UVa136_UglyNumbers test_1 = UVa136_UglyNumbers(sampledata["n"]);
+		TIME_PROFILE(GenerateTitle("UVa136_UglyNumbers", "001", "1"));
 		cout << test_1.solve1();
 	}
-	//leetcode4 test_2 = leetcode4(sampledata["nums1"], sampledata["nums2"]);
-	//{
-	//	TIME_PROFILE(GenerateTitle("leetcode4", "001", "±©Á¦ºÏ²¢"));
-	//	cout << test_2.solve1();
-	//}
-	//leetcode3 test_3 = leetcode3(sampledata["s"]);
-	//{
-	//	TIME_PROFILE(GenerateTitle("leetcode3", "002", "3"));
-	//	cout << test_2.solve3();
-	//}
+
+	
 	getchar();
 	return 0;
 }
