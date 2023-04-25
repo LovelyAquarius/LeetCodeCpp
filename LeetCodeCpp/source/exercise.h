@@ -7,7 +7,7 @@
 
 
 //other
-#include "solutions/other/UVa156_Ananagrams/UVa156_Ananagrams.h"
-#include "solutions/other/UVa540_TeamQueue/UVa540_TeamQueue.h"
-#include "solutions/other/UVa136_UglyNumbers/UVa136_UglyNumbers.h"
+#include "solutions/UVa/UVa156_Ananagrams/UVa156_Ananagrams.h"
+#include "solutions/UVa/UVa540_TeamQueue/UVa540_TeamQueue.h"
+#include "solutions/UVa/UVa136_UglyNumbers/UVa136_UglyNumbers.h"
 
