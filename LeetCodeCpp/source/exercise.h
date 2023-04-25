@@ -8,3 +8,4 @@
 
 //other
 #include "solutions/other/UVa156_Ananagrams/UVa156_Ananagrams.h"
+#include "solutions/other/UVa540_TeamQueue/UVa540_TeamQueue.h"

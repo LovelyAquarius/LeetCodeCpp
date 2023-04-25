@@ -3,6 +3,7 @@
 #include <nlohmann/json.hpp>
 #include <iostream>
 #include <vector>
+#include <queue>
 #include<array>
 #include <stack>
 #include <stdio.h>

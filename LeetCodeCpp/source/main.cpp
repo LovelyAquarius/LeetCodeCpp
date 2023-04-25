@@ -20,11 +20,11 @@ int main()
 {
 	App* app = App::getApp();
 	
-	json sampledata = GetSampleData("other", "UVa156_Ananagrams", "001");
+	json sampledata = GetSampleData("other", "UVa540_TeamQueue", "001");
 	
-	UVa156_Ananagrams test_1 = UVa156_Ananagrams(sampledata["words"]);
+	UVa540_TeamQueue test_1 = UVa540_TeamQueue(sampledata["members"], sampledata["operations"]);
 	{
-		TIME_PROFILE(GenerateTitle("UVa156_Ananagrams", "001", "1"));
+		TIME_PROFILE(GenerateTitle("UVa540_TeamQueue", "001", "1"));
 		cout << test_1.solve1();
 	}
 	//leetcode4 test_2 = leetcode4(sampledata["nums1"], sampledata["nums2"]);

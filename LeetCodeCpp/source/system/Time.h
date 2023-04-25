@@ -62,4 +62,5 @@ struct ProfileMessage
 //注意在测试的时候尽可能只测试某个算法，而不要把其他数据的io操作等也一起测试了，需要测试的是特定的算法。
 
 //这个测试的数据只能作参考。
+//目前这个方式是存在测试问题的，因为有一些类中会存在很多不应该参与测试的函数，但全部测了
 #define TIME_PROFILE(name) Timer Timer_##__LINE__(name,[&](ProfileMessage profile){std::cout<<profile.Name<<"用时:"<<profile.Time<<"ms"<<std::endl;})
