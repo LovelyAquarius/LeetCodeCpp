@@ -15,24 +15,44 @@ using json = nlohmann::json;
 //目前仅支持Windows平台
 //项目暂时使用premake生成vs项目，有时间我会考虑其他平台的支持，camke支持。
 
-
+//使用宏TIME_PROFILE时，可以用for循环多次运行同一算法，这样区别更大些
 int main() 
 {
 	App* app = App::getApp();
 	
-	json sampledata = GetSampleData("other", "UVa136_UglyNumbers", "002");
+	json sampledata = GetSampleData("other", "lanqiao202314_01", "001");
 	
 	
 	{
-		UVa136_UglyNumbers test_2 = UVa136_UglyNumbers(sampledata["n"]);
-		TIME_PROFILE(GenerateTitle("UVa136_UglyNumbers", "001", "2"));
-		cout << test_2.solve2();
+		lanqiao202314_01 test = lanqiao202314_01(sampledata["input"]);
+		TIME_PROFILE(GenerateTitle("lanqiao202314_01", "001", "1"));
+		cout << test.solve1();
+	}
+	/*{
+		leetcode5 test = leetcode5(sampledata["s"]);
+		TIME_PROFILE(GenerateTitle("leetcode5", "001", "2"));
+		cout << test.solve2();
+	}*/
+	
+	/*{
+		int i = 0;
+		TIME_PROFILE(GenerateTitle("leetcode5 30次", "001", "1"));
+		while(i++<100000) {
+			leetcode5 test = leetcode5(sampledata["s"]);
+		}
+		leetcode5 test = leetcode5(sampledata["s"]);
+		cout << test.solve1();
 	}
 	{
-		UVa136_UglyNumbers test_1 = UVa136_UglyNumbers(sampledata["n"]);
-		TIME_PROFILE(GenerateTitle("UVa136_UglyNumbers", "001", "1"));
-		cout << test_1.solve1();
-	}
+		int i = 0;
+		TIME_PROFILE(GenerateTitle("leetcode5 30次", "001", "2"));
+		while (i++ < 100000) {
+			leetcode5 test = leetcode5(sampledata["s"]);
+		}
+		leetcode5 test = leetcode5(sampledata["s"]);
+		cout << test.solve1();
+	}*/
+
 
 	
 	getchar();

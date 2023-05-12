@@ -80,7 +80,8 @@ public://算法部分
 			}
 		}//初始化完成
 
-		for (int width = 2; width < size; width++) {
+		for (int width = 2; width < size; width++) {//矩阵斜向上进行状态转移
+			//这里细节上还可以优化，但整体思路是这样的
 			for (int i = 0; i < size; i++) {
 				if (i + width < size) {
 					if ( (dp[i][i + width] = s[i] == s[i + width] && dp[i + 1][i + width - 1]) && width+1>max) {
