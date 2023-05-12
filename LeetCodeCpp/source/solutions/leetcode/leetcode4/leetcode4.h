@@ -14,8 +14,8 @@ public://算法部分
 	//解法1:二分查找 这个解法的时间复杂度只有O(log min(m+n)) ，甚至比题目要求更快
 	//O(n)
 	virtual Result solve1() override {
-		int m = nums1.size();
-		int n = nums2.size();//记录两个数组长度
+		int m = int(nums1.size());
+		int n = int(nums2.size());//记录两个数组长度
 
 		if ( m<= n ) {//第一个数组较短,这么做是为了让二分查找的时间复杂度更低
 			int k = (m + n +1) / 2; // 要求的中位数,第k个数
@@ -69,7 +69,7 @@ public://算法部分
 	//注意这里如果使用stl的sort花费时间会更长，所以采用手动归并排序
 	//这个解法可以当作对比参考
 	virtual Result solve3() override {
-			int m = nums1.size();
+		    int m = int(nums1.size());
 			int n = nums2.size();
 			int t = m + n;
 			vector<int> nums(t);

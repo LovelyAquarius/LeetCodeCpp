@@ -60,7 +60,7 @@ public://算法部分
 	//解法2:动态规划
 	
 	virtual Result solve2() override {
-		const int size = s.length();
+		const int size = int(s.length());
 		int max = 1;//记录最长回文长度
 		int start = 0;//记录最长回文起始位置
 		if (size <= 1) {

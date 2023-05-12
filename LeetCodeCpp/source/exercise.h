@@ -12,7 +12,8 @@
 #include "solutions/UVa/UVa156_Ananagrams/UVa156_Ananagrams.h"
 #include "solutions/UVa/UVa540_TeamQueue/UVa540_TeamQueue.h"
 #include "solutions/UVa/UVa136_UglyNumbers/UVa136_UglyNumbers.h"
-
+//personal
+#include "solutions/personal/personal1/personal1.h"
 //other
 #include "solutions/other/lanqiao202314_01/lanqiao202314_01.h"
 

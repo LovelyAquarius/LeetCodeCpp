@@ -20,38 +20,57 @@ int main()
 {
 	App* app = App::getApp();
 	
-	json sampledata = GetSampleData("other", "lanqiao202314_01", "001");
+	json sampledata = GetSampleData("personal", "personal1", "002");
 	
-	
-	{
-		lanqiao202314_01 test = lanqiao202314_01(sampledata["input"]);
-		TIME_PROFILE(GenerateTitle("lanqiao202314_01", "001", "1"));
+	//测试算法正确性
+	/*{
+		personal1 test = personal1(sampledata["number"]);
+		TIME_PROFILE(GenerateTitle("personal1", "001", "1"));
 		cout << test.solve1();
 	}
-	/*{
-		leetcode5 test = leetcode5(sampledata["s"]);
-		TIME_PROFILE(GenerateTitle("leetcode5", "001", "2"));
+	{
+		personal1 test = personal1(sampledata["number"]);
+		TIME_PROFILE(GenerateTitle("personal1", "001", "2"));
 		cout << test.solve2();
+	}
+	{
+		personal1 test = personal1(sampledata["number"]);
+		TIME_PROFILE(GenerateTitle("personal1", "001", "3"));
+		cout << test.solve3();
 	}*/
 	
-	/*{
+
+	//测试算法快速性
+	{
 		int i = 0;
-		TIME_PROFILE(GenerateTitle("leetcode5 30次", "001", "1"));
+		TIME_PROFILE(GenerateTitle("personal1 100000次", "001", "1"));
 		while(i++<100000) {
-			leetcode5 test = leetcode5(sampledata["s"]);
+			personal1 test = personal1(sampledata["number"]);
+			test.solve1();
 		}
-		leetcode5 test = leetcode5(sampledata["s"]);
+		personal1 test = personal1(sampledata["number"]);
 		cout << test.solve1();
 	}
 	{
 		int i = 0;
-		TIME_PROFILE(GenerateTitle("leetcode5 30次", "001", "2"));
+		TIME_PROFILE(GenerateTitle("personal1 100000次", "001", "2"));
 		while (i++ < 100000) {
-			leetcode5 test = leetcode5(sampledata["s"]);
+			personal1 test = personal1(sampledata["number"]);
+			test.solve2();
 		}
-		leetcode5 test = leetcode5(sampledata["s"]);
-		cout << test.solve1();
-	}*/
+		personal1 test = personal1(sampledata["number"]);
+		cout << test.solve2();
+	}
+	{
+		int i = 0;
+		TIME_PROFILE(GenerateTitle("personal1 100000次", "001", "3"));
+		while (i++ < 100000) {
+			personal1 test = personal1(sampledata["number"]);
+			test.solve3();
+		}
+		personal1 test = personal1(sampledata["number"]);
+		cout << test.solve3();
+	}
 
 
 	
